@@ -22,11 +22,6 @@
     {% tag "homepage" with "homepage_widget" %}
   {% endif %}
 
-  <div class="like-page">
-    Do you like this page?
-    {% include "like_page" %}
-  </div>
-
   {% if page.show_stream? %}
   {% include "page_stream" %}
   {% endif %}
