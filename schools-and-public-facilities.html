@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+{% if page.headline.size > 0 %}
+<h2 class="headline">{{ page.headline }}</h2>
+{% endif %}
+
+<div class="container">
+  <div class="row">
+    <div class="mb-5"><img src="https://d3n8a8pro7vhmx.cloudfront.net/katiecristol/pages/257/attachments/original/1548363707/aaron-burden-60068-unsplash.jpg?1548363707" class="img-fluid"/></div>
+    <p class="h1">The quality of Arlington Public Schools isn’t just important to me as a leader in Arlington County: It’s personal. When I started my career in education policy, my husband Steve and I chose to make our home in Arlington because we wanted invest ourselves in a community that shared the values I was working for: High academic standards, supporting excellent teachers, and investing in the most vulnerable learners. As a volunteer at Randolph Elementary, I saw some of Arlington’s best educators in action every week for years -- and now, Steve and I are getting ready to welcome our own future Randolph Star, who will start kindergarten in the fall of 2024.
+    </p>
+    <br/>
+    <br/>
+    <p>From my professional work, I know that the most important elements of a child&rsquo;s education - the teacher and the curriculum - happen inside the classroom. But the County Board plays an essential role in helping the School Board, and APS in general, conquer one of our biggest challenges and opportunities: Ensuring sufficient space and facilities for our growing student population.</p>
+<p>Facilities planning has been a key area of focus for me on the County Board, and the three new or expanded schools opening their doors this fall will go a long way to ease crowding in elementary and middle schools Countywide. My colleagues and I have sought to support the School Board over the past three years in addressing the most acute capacity crunches through more effective site planning and construction processes. In particular:</p>
+<ul>
+<li>My colleagues and I pressed for, and in November 2018 realized, a series of <strong><a href="https://newsroom.arlingtonva.us/release/county-streamlines-process-for-school-use-permits/">permitting and construction review reforms to make school projects more efficient and help avoid cost and timeline overruns</a></strong>.</li>
+</ul>
+<ul>
+<li>As the hands-on County Board liaison to the planning process for the new elementary school at Thomas Jefferson (now Alice West Fleet elementary), I was proud to work hard with the surrounding communities to improve communications and even street signage so that transportation impacts of this controversial project didn&rsquo;t slow down its successful completion.</li>
+</ul>
+<p>At the County Board, School Board and staff levels, we have also taken steps to get a better handle on long-range planning to ensure that our facilities siting and funding decisions are driven by strategy and community input, not a &ldquo;crisis mentality.&rdquo; For example:</p>
+<ul>
+<li>As a founding member of the first Joint Subcommittee of the School and County Boards on Facilities in 2017, I helped establish our <strong><a href="https://commissions.arlingtonva.us/jfac/">Joint Facilities Subcommittee</a></strong> and recruit its inaugural membership to make it one of the County&rsquo;s most demographically diverse and geographically representative Commissions.</li>
+<li>Under the leadership of both Boards, an external expert review of our <strong><a href="https://arlington.granicus.com/MetaViewer.php?view_id=2&amp;clip_id=3286&amp;meta_id=155881">population and demographic forecasting practices</a></strong> led to <strong><a href="https://www.apsva.us/wp-content/uploads/2018/07/Projections-Methodology-Question_Final.pdf">improved practices for predicting the number of APS students based on housing</a></strong> in the County.</li>
+</ul>
+<p>Yet we still need to do more to show how Arlington plans not only to address current needs, but how we will accommodate the growth in students over the coming decades. In particular, I am committed to:</p>
+<ul>
+<li>Realizing a strategic, multi-decade plan for future schools facilities to match our other long-term components, like parks and housing, in our <strong><a href="https://projects.arlingtonva.us/plans-studies/comprehensive-plan/">Comprehensive Plan</a></strong>.</li>
+</ul>
+<ul>
+<li>Improving collaboration on transportation, especially:</li>
+<ul>
+<li>Maximizing joint or private parking opportunities, especially in more urban school locations, to reduce capital costs of building more parking for school facilities</li>
+<li>Improving middle and high school student ridership on ART to reduce demands on our school bus fleet</li>
+</ul>
+</ul>
+  </div>
+</div>
+
+<div id="content">
+
+  <div id="intro" class="intro">
+    <div class="text-content">
+      {{ page.basic.content }}
+    </div>
+  </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="page-tags">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %}
+
+
+
+  {% if page.show_stream? %}
+  {% include "page_stream" %}
+  {% endif %}
+
+</div>
