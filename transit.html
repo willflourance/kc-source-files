@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+{% if page.headline.size > 0 %}
+<h2 class="headline">{{ page.headline }}</h2>
+{% endif %}
+
+<div class="container">
+  <div class="row">
+    <div class="mb-5"><img src="https://d3n8a8pro7vhmx.cloudfront.net/katiecristol/pages/259/attachments/original/1548433189/tbel-abuseridze-605262-unsplash.jpg?1548433189" class="img-fluid"/></div>
+    <p class="h3">About a fifth of Arlington’s energy use is driven by transportation from residents and non-residents within the County. Fighting climate change and achieving our Community Energy Plan goals requires strong commitments to moving more people where they’re going, living and working without more single-occupancy vehicles. And, congested roads and worries about parking scarcity are also some of the greatest concerns throughout our neighborhoods, making transit just as critical to our daily quality of life as it is to our shared global future.
+    </p>
+    <p>As a leader on the Virginia Railway Express, Northern Virginia Transportation Commission and the Northern Virginia Transportation Authority, I am committed to helping restore Metro reliability and ridership and expand the systems, especially through key capital projects in Crystal City and Pentagon City as the workforce grows.</p>
+    <p>During my tenure as Chair of the County Board - and as Chair of the Legislative Committees for NVTC and VRE both - our region achieved the extraordinary milestone of dedicated capital funding for Metro: a first in the system&rsquo;s many-decades history. But in the Virginia General Assembly, that achievement came at the cost of critical funds for other road and transit improvements. So I&rsquo;ll be continuing to work with our partners, from Loudoun to Fredericksburg, to fight for restoration of transportation funds and a truly interconnected transportation system across the region.</p>
+    <p>Here in Arlington, during my time on the Board, I&rsquo;ve pushed for &ldquo;what&rsquo;s next&rdquo; on Columbia Pike. The coming months will bring (too) long-awaited milestones for <strong><a href="https://projects.arlingtonva.us/projects/columbia-pike-premium-transit-network/">premium bus service on Columbia Pike</a></strong>, the Commonwealth&rsquo;s most heavily trafficked corridor for bus ridership, like new transit stations beginning in summer 2019. These improvements will build on the millions of dollars we&rsquo;ve invested in creating <strong><a href="https://projects.arlingtonva.us/projects/columbia-pike-multimodal-street-improvements/">more accessible, safer streets and sidewalks</a></strong> for all users on the Pike, and I&rsquo;ll continue to prioritize transit on the corridor. And as the County Board&rsquo;s liaison to the Lee Highway Alliance since its founding, I&rsquo;ll be advocating for developing new transit, pedestrian- and bike-supporting plans for Lee Highway during the <strong><a href="https://projects.arlingtonva.us/plans-studies/land-use/lee-highway/">Plan Lee Highway</a></strong> Initiative.</p>
+  </div>
+</div>
+
+<div id="content">
+
+  <div id="intro" class="intro">
+    <div class="text-content">
+      {{ page.basic.content }}
+    </div>
+  </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="page-tags">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %}
+
+  {% if page.is_homepage? == true and site.page_tags contains "homepage" %}
+    {% tag "homepage" with "homepage_widget" %}
+  {% endif %}
+
+
+  {% if page.show_stream? %}
+  {% include "page_stream" %}
+  {% endif %}
+
+</div>

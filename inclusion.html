@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+{% if page.headline.size > 0 %}
+<h2 class="headline">{{ page.headline }}</h2>
+{% endif %}
+
+<div class="container">
+  <div class="row">
+    <div class="mb-5"><img src="https://d3n8a8pro7vhmx.cloudfront.net/katiecristol/pages/260/attachments/original/1548435941/nitish-meena-198784-unsplash.jpg?1548435941" class="img-fluid"/></div>
+    <p class="h3">For decades, Arlington County’s story has been a story of the fight for inclusion: Defiance of Massive Resistance, as the first Virginia locality to integrate our schools; waves of immigrants and refugees shaping the County’s culture and economy. In our current national political moment, Arlingtonians have risen to affirm that history, and those values, again and again.
+      <p>On the County Board, I&rsquo;ve fought to ensure that wherever possible, our County will be a beacon of support and fairness for our immigrant, refugee and mixed-status families, amid the darkness of exclusionary federal policies under the Trump administration. As Vice Chair of the Board in 2016, I led efforts to <strong><a href="https://newsroom.arlingtonva.us/release/arlington-funds-legal-aid-for-immigrants/">make Arlington the first jurisdiction in Virginia to fund legal services for immigrant families</a></strong>, to review our <strong><a href="https://topics.arlingtonva.us/resources-immigrants/">public safety and human services policies</a></strong> regarding interactions with federal enforcement agencies, and to improve communication and outreach with our concerned communities.</p>
+      <p>Now, as Arlington grows and changes, we face threats to the very diversity that inspired so many of us to make this community home. Affordability is the most critical: What this community looks like, and who calls it home, is in large part a function of the cost of its housing. But we need a broader agenda to ensure that the work of government and community is truly furthering our values of inclusion and equity.</p>
+      <p>My priorities include:</p>
+      <ul>
+      <li>Building on Arlington&rsquo;s recent public health plan, <em>Destination 2027</em>, gather additional information on disparities in health and economic access throughout the County.</li>
+      </ul>
+      <ul>
+      <li>Developing equity-based frameworks to evaluate whether our decisions (both policy and programmatic) are advancing or stymying equity goals.</li>
+      </ul>
+      <p><br /><strong><a href="http://www.liunamidatlantic.org/news/story/local-leaders-advocate-for-striking-didlake-workers">Continuing to stand with</a><a href="https://www.arlnow.com/2016/07/19/county-board-members-join-strike-at-arlington-national-cemetery/"> working people in Arlington County</a></strong> and capitalize on changes in the state political context to advocate forcefully and effectively implement economic fairness reforms at the local level, like living wage ordinances, procurement reform and project labor agreements.</p>
+    </p>
+    <p>As a leader on the Virginia Railway Express, Northern Virginia Transportation Commission and the Northern Virginia Transportation Authority, I am committed to helping restore Metro reliability and ridership and expand the systems, especially through key capital projects in Crystal City and Pentagon City as the workforce grows.</p>
+    <p>During my tenure as Chair of the County Board - and as Chair of the Legislative Committees for NVTC and VRE both - our region achieved the extraordinary milestone of dedicated capital funding for Metro: a first in the system&rsquo;s many-decades history. But in the Virginia General Assembly, that achievement came at the cost of critical funds for other road and transit improvements. So I&rsquo;ll be continuing to work with our partners, from Loudoun to Fredericksburg, to fight for restoration of transportation funds and a truly interconnected transportation system across the region.</p>
+    <p>Here in Arlington, during my time on the Board, I&rsquo;ve pushed for &ldquo;what&rsquo;s next&rdquo; on Columbia Pike. The coming months will bring (too) long-awaited milestones for <strong><a href="https://projects.arlingtonva.us/projects/columbia-pike-premium-transit-network/">premium bus service on Columbia Pike</a></strong>, the Commonwealth&rsquo;s most heavily trafficked corridor for bus ridership, like new transit stations beginning in summer 2019. These improvements will build on the millions of dollars we&rsquo;ve invested in creating <strong><a href="https://projects.arlingtonva.us/projects/columbia-pike-multimodal-street-improvements/">more accessible, safer streets and sidewalks</a></strong> for all users on the Pike, and I&rsquo;ll continue to prioritize transit on the corridor. And as the County Board&rsquo;s liaison to the Lee Highway Alliance since its founding, I&rsquo;ll be advocating for developing new transit, pedestrian- and bike-supporting plans for Lee Highway during the <strong><a href="https://projects.arlingtonva.us/plans-studies/land-use/lee-highway/">Plan Lee Highway</a></strong> Initiative.</p>
+  </div>
+</div>
+
+<div id="content">
+
+  <div id="intro" class="intro">
+    <div class="text-content">
+      {{ page.basic.content }}
+    </div>
+  </div>
+
+  {% if page.tags_count > 0 %}
+  <div class="page-tags">
+    {% include "page_tags" with page %}
+  </div>
+  {% endif %}
+
+  {% if page.is_homepage? == true and site.page_tags contains "homepage" %}
+    {% tag "homepage" with "homepage_widget" %}
+  {% endif %}
+
+
+  {% if page.show_stream? %}
+  {% include "page_stream" %}
+  {% endif %}
+
+</div>
