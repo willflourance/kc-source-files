@@ -197,17 +197,23 @@
           <div class="width-container clearfix">
 
             <div class="row-fluid">
-
               <div class="span4 footer-left footer-supporter-tiles-wrap">
                 {% unless site.recent_supporters_with_pictures == empty %}
+                {% assign recent_donors = 0 %}
+{% for signup in site.recent_supporters_with_pictures %}
+{% if signup.has_donated? %}
+{% assign recent_donors = recent_donors | plus: 1 %}
+{% endif %}
+{% endfor %}
+
+{% unless recent_donors == 0 %}
                 <h4>Powered by people like you</h4>
                 <div class="footer-supporter-tiles clearfix">
                   {% for signup in site.recent_supporters_with_pictures limit:10 %}
-                  {% if signup.has_donated? %}
                   {{ signup.bigger_profile_image }}
-                  {% endif %}
                   {% endfor %}
                 </div>
+                {% endunless %}
                 {% endunless %}
               </div>
 
