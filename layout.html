@@ -203,7 +203,9 @@
                 <h4>Powered by people like you</h4>
                 <div class="footer-supporter-tiles clearfix">
                   {% for signup in site.recent_supporters_with_pictures limit:10 %}
+                  {% if signup.has_donated? %}
                   {{ signup.bigger_profile_image }}
+                  {% endif %}
                   {% endfor %}
                 </div>
                 {% endunless %}
