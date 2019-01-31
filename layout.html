@@ -14,6 +14,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="theme.scss" type="text/css">
   <link rel="stylesheet" href="tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
   <!-- because ie8 ignores media queries, we need this -->
   <!--[if IE 8]>
@@ -198,23 +200,14 @@
 
             <div class="row-fluid">
               <div class="span4 footer-left footer-supporter-tiles-wrap">
-                {% unless site.recent_supporters_with_pictures == empty %}
-                {% assign recent_donors = 0 %}
-{% for signup in site.recent_supporters_with_pictures %}
-{% if signup.has_donated? %}
-{% assign recent_donors = recent_donors | plus: 1 %}
-{% endif %}
-{% endfor %}
 
-{% unless recent_donors == 0 %}
                 <h4>Powered by people like you</h4>
                 <div class="footer-supporter-tiles clearfix">
                   {% for signup in site.recent_supporters_with_pictures limit:10 %}
                   {{ signup.bigger_profile_image }}
                   {% endfor %}
                 </div>
-                {% endunless %}
-                {% endunless %}
+
               </div>
 
               <div class="span6 footer-left footer-content">
@@ -236,26 +229,8 @@
                      You can style it or move it in different ways, but please leave it in the footer. -->
                 <p>Created with <a href="http://nationbuilder.com/">NationBuilder</a></p>
                 <p>
-                  {% if site.has_twitter? %}
-                  <span class="footer-social-button">
-                    <a href="{{ site.broadcaster.twitter_profile_url }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.broadcaster.twitter_login }} on Twitter</a>
-                  </span>
-                  {% endif %}
-                  {% if site.has_facebook_page? %}
-                  <span class="footer-social-button"><fb:like href="{{ site.broadcaster.facebook_page_profile_url }}" data-layout="button" layout="button" action="like" show_faces="false" share="false"></fb:like></span>
-                  {% else %}
-                  <span class="footer-social-button"><fb:like href="{{ site.full_url }}" layout="button" action="like" show_faces="false" share="false"></fb:like></span>
-                  {% endif %}
-                </p>
-              </div>
 
-              <div class="span2 footer-right footer-social-links">
-                {% if site.has_twitter? %}
-                <a class="twitter" target="_blank" href="{{ site.broadcaster.twitter_profile_url }}"><span class="icon-twitter-squared"></span></a>
-                {% endif %}
-                {% if site.has_facebook_page? %}
-                <a class="facebook" target="_blank" href="{{ site.broadcaster.facebook_page_profile_url }}"><span class="icon-facebook-squared"></span></a>
-                {% endif %}
+                </p>
               </div>
 
             </div>
