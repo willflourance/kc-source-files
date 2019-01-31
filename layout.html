@@ -222,6 +222,16 @@
                 <a href="{{ request.current_signup.settings_url }}">account settings</a>, or
                 <a href="{{ request.current_signup.logout_url }}">sign out</a>.</p>
                 {% else %}
+                <div class="row">
+                <div class="col-sm-6">
+                  <ul>
+                    <li>Register To Vote</li>
+                    <li>Contact</li>
+                    <li>Volunteer</li>
+                    <li>Donate</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
                 <p>Sign in with <a href="{{ request.facebook_connect_url }}">Facebook</a>, <a
                     href="{{ request.twitter_connect_url }}">Twitter</a> or <a href="/login">email</a>.</p>
                 {% endif %}
@@ -231,6 +241,11 @@
                 <p>
 
                 </p>
+                </div>
+
+                </div>
+
+
               </div>
 
             </div>
