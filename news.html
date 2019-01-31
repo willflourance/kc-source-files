@@ -57,13 +57,7 @@
         {% endfor %}
       {% endif %}
 
-      <div class="excerpt-child {% if img_url %}postcard{% endif %}">
-
-        {% if img_url %}
-        <div class="excerpt-postcard-image" style="background-image: url('{{ img_url }}')">
-          <a href="{{ post.url }}"></a>
-        </div>
-        {% endif %}
+      <div class="excerpt-child">
 
         <h3><a href="{{ post.url }}">{{ post.headline }}</a></h3>
 
