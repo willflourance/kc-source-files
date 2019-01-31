@@ -64,7 +64,7 @@
         <div class="byline-abbreviated">{{ post.published_at | date: '%b %d, %Y' }}</div>
 
         <div class="excerpt">
-          {{ post.blog_post.content | strip_html }}
+          {{ post.blog_post.content}}
           {% if post.blog_post.is_extended? %}
           <span class="read-more"><a href="{{ post.url }}">Continue reading</a></span>
           {% endif %}
