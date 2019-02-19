@@ -1,10 +1,11 @@
-{% include "breadcrumbs" %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet"/>
 
 {% if page.headline.size > 0 and page.blog.is_posting_public? %}
 <h2 class="headline">{{ page.headline }}</h2>
 {% endif %}
 
-<div id="content">
+<div class="row">
+<div id="content" class="col-lg-8">
 
   {% if page.blog.is_posting_public? %}
 
@@ -77,4 +78,7 @@
   </div>
 
   {{ page.blog.most_recent_blog_posts | paginate prev_label: "&laquo;" next_label: "&raquo;" }}
+</div>
+<div class="col-lg-3 offset-lg-1" style="padding: 0px;"><a class="twitter-timeline" data-theme="dark" href="https://twitter.com/kcristol?ref_src=twsrc%5Etfw">Tweets by kcristol</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
 </div>
